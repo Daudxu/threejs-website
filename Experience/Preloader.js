@@ -289,6 +289,17 @@ export default class Preloader extends EventEmitter {
                     ease: "back.out(2.2)",
                     duration: 0.5,
                 })
+                .to(this.roomChildren.computer.position, {
+                    x: 3,
+                    y: 10,
+                    z: 0,
+                    ease: "back.out(2.2)",
+                    duration: 0.5,
+                })
+                .to(this.roomChildren.computer.rotation,
+                    {
+                        y: Math.PI / 1.3 ,
+                })
                 .set(this.roomChildren.mini_floor.scale, {
                     x: 1,
                     y: 1,
