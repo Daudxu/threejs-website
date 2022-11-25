@@ -2,6 +2,13 @@
 # yarn lockfile v1
 
 
+"@ashthornton/asscroll@^2.0.11":
+  version "2.0.11"
+  resolved "https://registry.npmjs.org/@ashthornton/asscroll/-/asscroll-2.0.11.tgz#d8f3d6c52244d724bd294fa18075d97dd7689370"
+  integrity sha512-X7Z+0aePdxn2WeKTx+sX/U9KNwjRSlY+ZeoGO7ZQy4uKRZ2cSHZi5ho9WiuDAPTPj97Smb2aZ7XC8goR73SmPA==
+  dependencies:
+    "@unseenco/e" "^2.2.2"
+
 "@esbuild/android-arm@0.15.15":
   version "0.15.15"
   resolved "https://registry.npmjs.org/@esbuild/android-arm/-/android-arm-0.15.15.tgz#35b3cc0f9e69cb53932d44f60b99dd440335d2f0"
@@ -11,6 +18,13 @@
   version "0.15.15"
   resolved "https://registry.npmjs.org/@esbuild/linux-loong64/-/linux-loong64-0.15.15.tgz#32c65517a09320b62530867345222fde7794fbe1"
   integrity sha512-lhz6UNPMDXUhtXSulw8XlFAtSYO26WmHQnCi2Lg2p+/TMiJKNLtZCYUxV4wG6rZMzXmr8InGpNwk+DLT2Hm0PA==
+
+"@unseenco/e@^2.2.2":
+  version "2.2.3"
+  resolved "https://registry.npmjs.org/@unseenco/e/-/e-2.2.3.tgz#ca31b196398ccdb1001b8c0a66cca3922c31b2bd"
+  integrity sha512-ntxSrExl+KRWjbD3D4U2AnDZAwD0BZyhowQ6y+bbPqvvEkKfFdTlGNUa/xCwezHvZe+YowJ+mHAGjxtvMtK73Q==
+  dependencies:
+    selector-set "^1.1.5"
 
 esbuild-android-64@0.15.15:
   version "0.15.15"
@@ -155,6 +169,11 @@ function-bind@^1.1.1:
   resolved "https://registry.npmjs.org/function-bind/-/function-bind-1.1.1.tgz#a56899d3ea3c9bab874bb9773b7c5ede92f4895d"
   integrity sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A==
 
+gsap@^3.11.3:
+  version "3.11.3"
+  resolved "https://registry.npmjs.org/gsap/-/gsap-3.11.3.tgz#ca5be827f56fe8d5720e08343390f74fb89a05f3"
+  integrity sha512-xc/iIJy+LWiMbRa4IdMtdnnKa/7PXEK6NNzV71gdOYUVeTZN7UWnLU0fB7Hi1iwiz4ZZoYkBZPPYGg+2+zzFHA==
+
 has@^1.0.3:
   version "1.0.3"
   resolved "https://registry.npmjs.org/has/-/has-1.0.3.tgz#722d7cbfc1f6aa8241f16dd814e011e1f41e8796"
@@ -168,6 +187,11 @@ is-core-module@^2.9.0:
   integrity sha512-RRjxlvLDkD1YJwDbroBHMb+cukurkDWNyHx7D3oNB5x9rb5ogcksMC5wHCadcXoo67gVr/+3GFySh3134zi6rw==
   dependencies:
     has "^1.0.3"
+
+lil-gui@^0.17.0:
+  version "0.17.0"
+  resolved "https://registry.npmjs.org/lil-gui/-/lil-gui-0.17.0.tgz#b41ae55d0023fcd9185f7395a218db0f58189663"
+  integrity sha512-MVBHmgY+uEbmJNApAaPbtvNh1RCAeMnKym82SBjtp5rODTYKWtM+MXHCifLe2H2Ti1HuBGBtK/5SyG4ShQ3pUQ==
 
 nanoid@^3.3.4:
   version "3.3.4"
@@ -208,6 +232,11 @@ rollup@^2.79.1:
   integrity sha512-uKxbd0IhMZOhjAiD5oAFp7BqvkA4Dv47qpOCtaNvng4HBwdbWtdOh8f5nZNuk2rp51PMGk3bzfWu5oayNEuYnw==
   optionalDependencies:
     fsevents "~2.3.2"
+
+selector-set@^1.1.5:
+  version "1.1.5"
+  resolved "https://registry.npmjs.org/selector-set/-/selector-set-1.1.5.tgz#60c135aea482b6f46a2d95ad72058927690a8634"
+  integrity sha512-6SQw6yMew5iOZ8/cDHDEnJWRM4ot2mxP6szZyF5ptrBogw4AcS4EXRj/8BUfgAMwVfdL84qpModlBMOl2NVrsQ==
 
 source-map-js@^1.0.2:
   version "1.0.2"

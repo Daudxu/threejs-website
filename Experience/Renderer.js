@@ -1,48 +1,59 @@
-import * as THREE from 'three'
-import Experience from "./Experience";
+import * as THREE from "three";
+import Experience from "./Experience.js";
 
 export default class Renderer {
-    constructor(){
-         this.experience = new Experience();
- 
-         this.sizes = this.experience.sizes;
-         this.scene = this.experience.scene;
-         this.canvas = this.experience.canvas;
-         this.camera = this.experience.camera;
+    constructor() {
+        this.experience = new Experience();
+        this.sizes = this.experience.sizes;
+        this.scene = this.experience.scene;
+        this.canvas = this.experience.canvas;
+        this.camera = this.experience.camera;
 
-         this.setRenderer();
+        this.setRenderer();
     }
+
     setRenderer() {
-        this.renderer = new THREE.WebGL1Renderer({
+        this.renderer = new THREE.WebGLRenderer({
             canvas: this.canvas,
-            antialias: true
-        })
-        this.renderer.physicallyCorrectLights = true
+            antialias: true,
+        });
+
+        this.renderer.physicallyCorrectLights = true;
         this.renderer.outputEncoding = THREE.sRGBEncoding;
         this.renderer.toneMapping = THREE.CineonToneMapping;
         this.renderer.toneMappingExposure = 1.75;
-        // 启用阴影
         this.renderer.shadowMap.enabled = true;
         this.renderer.shadowMap.type = THREE.PCFSoftShadowMap;
-        // 渲染尺寸
         this.renderer.setSize(this.sizes.width, this.sizes.height);
-        // 渲染设备像素比
-        this.renderer.setPixelRatio(this.sizes.pixelRatio)
-    }
-    // 调整大小
-    resize(){
-       // 渲染尺寸
-       this.renderer.setSize(this.sizes.width, this.sizes.height);
-       // 渲染设备像素比
-       this.renderer.setPixelRatio(this.sizes.pixelRatio)
-    }
-    // 更新渲染
-    update(){
-        //渲染
-        this.renderer.render(this.scene, this.camera.perspectiveCamera)
-        this.renderer.render(this.scene, this.camera.orthographicCamera)
+        this.renderer.setPixelRatio(this.sizes.pixelRatio);
     }
 
+    resize() {
+        this.renderer.setSize(this.sizes.width, this.sizes.height);
+        this.renderer.setPixelRatio(this.sizes.pixelRatio);
+    }
 
+    update() {
+        // this.renderer.setViewport(0, 0, this.sizes.width, this.sizes.height);
+        this.renderer.render(this.scene, this.camera.orthographicCamera);
+        // Second Screen
+        // this.renderer.setScissorTest(true);
+        // this.renderer.setViewport(
+        //     this.sizes.width - this.sizes.width / 3,
+        //     this.sizes.height - this.sizes.height / 3,
+        //     this.sizes.width / 3,
+        //     this.sizes.height / 3
+        // );
 
+        // this.renderer.setScissor(
+        //     this.sizes.width - this.sizes.width / 3,
+        //     this.sizes.height - this.sizes.height / 3,
+        //     this.sizes.width / 3,
+        //     this.sizes.height / 3
+        // );
+
+        // this.renderer.render(this.scene, this.camera.perspectiveCamera);
+
+        // this.renderer.setScissorTest(false);
+    }
 }
